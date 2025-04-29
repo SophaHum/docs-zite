@@ -122,8 +122,9 @@ const components = {
     // eslint-disable-next-line @next/next/no-img-element
     <img className={cn("rounded-md border", className)} alt={alt} {...props} />
   ),
-  a: ({ className, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
+  a: ({ className, href = "#", ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
     <Link
+      href={href}
       className={cn("font-medium underline underline-offset-4", className)}
       {...props}
     />
