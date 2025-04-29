@@ -5,7 +5,6 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrettyCode from 'rehype-pretty-code';
 import remarkGfm from 'remark-gfm';
-import { visit } from 'unist-util-visit';
 import components from '@/components/mdx-components';
 
 const rootDirectory = path.join(process.cwd(), 'content');
@@ -30,7 +29,7 @@ export async function getDocBySlug(slug: string[]) {
         rehypePlugins: [
           rehypeSlug,
           [rehypeAutolinkHeadings, { behavior: 'wrap' }],
-          [rehypePrettyCode, { theme: 'github-dark' }],
+          // [rehypePrettyCode, { theme: 'github-dark' }],
         ],
         remarkPlugins: [remarkGfm],
       },
