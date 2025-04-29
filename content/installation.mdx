@@ -1,0 +1,65 @@
+---
+title: Installation
+description: Getting started with Next.js documentation site
+---
+
+# Installation
+
+This guide will help you set up a new documentation website using Next.js and MDX.
+
+## Prerequisites
+
+Before you begin, make sure you have the following installed:
+
+- Node.js 16.8.0 or later
+- npm, yarn, or pnpm for package management
+
+## Creating a New Project
+
+The easiest way to get started is with the Next.js CLI which sets up everything automatically for you:
+
+```bash
+# Create a new Next.js project with TypeScript
+npx create-next-app@latest my-docs --typescript
+
+# Change to the new directory
+cd my-docs
+```
+
+## Manual Setup
+
+To manually set up a Next.js project with MDX support, follow these steps:
+
+```bash
+# Create an empty directory and initialize npm
+mkdir my-docs
+cd my-docs
+npm init -y
+
+# Install Next.js, React, and React DOM
+npm install next react react-dom
+
+# Install dependencies for MDX
+npm install next-mdx-remote gray-matter rehype-slug rehype-autolink-headings
+```
+
+Then, update your `package.json` file to include the Next.js scripts:
+
+```json
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint"
+}
+```
+
+## Development Server
+
+After setting up your project, you can start the development server:
+
+```bash
+npm run dev
+```
+
+This will start the development server on `http://localhost:3000`. You can now begin creating your documentation site.

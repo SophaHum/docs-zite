@@ -1,0 +1,53 @@
+---
+title: Table of Contents
+description: Learn about the table of contents feature
+---
+
+# Table of Contents
+
+The documentation site includes a Table of Contents (ToC) feature to help users navigate through long pages.
+
+## How It Works
+
+The Table of Contents is automatically generated from the headings in your MDX content. It extracts all headings (h2, h3, and h4) and creates a navigable list of links.
+
+## Implementation
+
+The ToC component uses IntersectionObserver to track which headings are currently visible in the viewport, and highlights the corresponding ToC item.
+
+## Customization
+
+You can customize the appearance and behavior of the ToC component by modifying the following aspects:
+
+### Styling
+
+The ToC uses Tailwind CSS classes for styling. You can modify the styles in the ToC component:
+
+```tsx
+// components/toc.tsx
+export function TableOfContents({ toc }: TableOfContentsProps) {
+  // Component code
+}
+```
+
+### Depth
+
+By default, the ToC includes headings of levels 2, 3, and 4. You can modify this behavior in the extraction function:
+
+```tsx
+// Customize which heading levels to include
+const headings = toc.filter((item) => item.level >= 2 && item.level <= 4);
+```
+
+## Best Practices
+
+When writing documentation that will use the ToC:
+
+- Use headings in a hierarchical manner (h1 → h2 → h3 → h4)
+- Keep heading text concise to avoid ToC overflow
+- Use unique heading text to ensure proper linking
+- Aim for a balanced structure with 3-7 main sections (h2)
+
+## Mobile Display
+
+On small screens, the ToC is hidden by default to preserve screen space. Users can access it via a "On this page" dropdown menu.

@@ -1,0 +1,66 @@
+---
+title: Code Highlighting
+description: Learn about syntax highlighting in the documentation
+---
+
+# Code Highlighting
+
+Code blocks in MDX files are automatically syntax highlighted for better readability.
+
+## Syntax Highlighting
+
+This documentation site uses rehype-pretty-code for syntax highlighting. It provides beautiful, accessible code highlighting with theme support.
+
+You can create syntax-highlighted code blocks using triple backticks followed by the language:
+
+````md
+```javascript
+function hello() {
+  console.log("Hello, world!");
+}
+```
+````
+
+Which will render as:
+
+```javascript
+function hello() {
+  console.log("Hello, world!");
+}
+```
+
+## Supported Languages
+
+The syntax highlighting supports a wide range of programming languages, including but not limited to:
+
+- JavaScript (js)
+- TypeScript (ts)
+- JSX (jsx)
+- TSX (tsx)
+- CSS (css)
+- HTML (html)
+- JSON (json)
+- Markdown (md)
+- Bash (bash)
+- Python (py)
+- Ruby (rb)
+- And many more...
+
+## Code Block Features
+
+The code blocks in this documentation include several helpful features:
+
+- **Syntax highlighting**: Language-aware syntax highlighting
+- **Line numbers**: Optional line numbers for easier reference
+- **Copy button**: One-click copying of code blocks
+- **Line highlighting**: Highlight specific lines for emphasis
+- **Word highlighting**: Highlight specific words or phrases
+
+## Custom Themes
+
+The code highlighting uses the theme system to provide consistent styling in both light and dark modes. The default themes are:
+
+- **Light mode**: GitHub Light
+- **Dark mode**: GitHub Dark
+
+You can customize these themes by modifying the configuration in your rehype-pretty-code setup.

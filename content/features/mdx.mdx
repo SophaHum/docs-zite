@@ -1,0 +1,76 @@
+---
+title: MDX
+description: Learn how to use MDX in your documentation
+---
+
+# MDX
+
+MDX is a powerful way to write content with embedded React components.
+
+## What is MDX?
+
+MDX is a format that combines Markdown with JSX. It allows you to use React components within your markdown content, giving you the expressive power of React with the simplicity of markdown.
+
+<Callout type="info">
+  MDX is a superset of markdown, so any valid markdown is also valid MDX.
+</Callout>
+
+## Syntax Example
+
+Here's a basic example of MDX syntax:
+
+```mdx
+# Hello World
+
+This is a paragraph with **bold text** and *italic text*.
+
+<Button>Click me</Button>
+
+## Subheading
+
+- List item 1
+- List item 2
+- List item 3
+```
+
+As you can see, you can mix Markdown syntax with React components seamlessly.
+
+## Using Components
+
+One of the most powerful features of MDX is the ability to use custom React components within your markdown files. For example:
+
+```mdx
+# Using Components
+
+<Callout type="info">
+  This is an informational callout that uses a custom component.
+</Callout>
+
+You can also use interactive components:
+
+<Tabs>
+  <Tab title="JavaScript">
+    ```js
+    function hello() {
+      console.log("Hello world!");
+    }
+    ```
+  </Tab>
+  <Tab title="TypeScript">
+    ```ts
+    function hello(): void {
+      console.log("Hello world!");
+    }
+    ```
+  </Tab>
+</Tabs>
+```
+
+### Built-in Components
+
+This documentation site comes with several built-in components that you can use in your MDX files:
+
+- **Callout**: For important messages or notes
+- **Tabs**: For creating tabbed interfaces
+- **Steps**: For step-by-step guides
+- **CodeBlock**: Enhanced code blocks with syntax highlighting and copy button
